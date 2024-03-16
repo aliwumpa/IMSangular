@@ -1,0 +1,17 @@
+.IMS-login {
+    &__container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 1px solid gray;
+        border-radius: 10px;
+        padding: {
+            top: 30px;
+            bottom: 30px;
+            right: 50px;
+            left: 50px;
+        };
+
+    }
+}

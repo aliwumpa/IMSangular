@@ -6,16 +6,26 @@
     <h2>Sign In</h2>
     <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
     <div class="IMS-login__username">
-        <mat-form-field appearance="fill">
+        <mat-form-field>
             <mat-label>Username</mat-label>
             <input matInput type="text" [(ngModel)]="username" name="username" required>
+            @if (username) {
+                <button matSuffix mat-icon-button aria-label="Clear" (click)="username=''">
+                    <mat-icon>close</mat-icon>
+                </button>
+            }
         </mat-form-field>
     </div>
     
     <div class="IMS-login__password">
-        <mat-form-field appearance="fill">
+        <mat-form-field>
             <mat-label>Password</mat-label>
             <input matInput type="password" [(ngModel)]="password" name="password" required>
+            @if (password) {
+                <button matSuffix mat-icon-button aria-label="Clear" (click)="password=''">
+                    <mat-icon>close</mat-icon>
+                </button>
+            }
         </mat-form-field>
     </div>
 </div>

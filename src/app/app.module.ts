@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 
 // import Component
 import { LoginComponent } from './components/login/login.component';
@@ -24,6 +25,7 @@ import { AppComponent } from './app.component';
       AppRoutingModule,
       BrowserAnimationsModule,
       MatIconModule,
+      MatButtonModule,
       MatFormFieldModule,
       MatInputModule,
     ],

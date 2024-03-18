@@ -4,14 +4,37 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        border: 1px solid gray;
-        border-radius: 10px;
-        padding: {
-            top: 30px;
-            bottom: 30px;
-            right: 50px;
-            left: 50px;
-        };
+    }
 
+    &__logo-container {
+        text-align: center;
+
+        mat-icon {
+            &:not(:last-child) {
+                margin-right: 5px;
+            }
+
+            width: 50px;
+            height: 50px;
+            font-size: 40px;
+        }
+    }
+
+    &__username,
+    &__password {
+        display: flex;
+        align-items: center;
+
+        mat-form-field {
+            width: 100%;
+        }
+
+        input {
+            width: 100%;
+        }
+    }
+
+    &__button {
+        text-align: center;
     }
 }

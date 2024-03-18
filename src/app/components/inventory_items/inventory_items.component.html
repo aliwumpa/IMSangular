@@ -1,3 +1,17 @@
-<div class="IMS__inventory_items--wrapper" id="IMS__inventory_items">
+<div class="IMS-inventory_items__wrapper" id="IMS__inventory_items">
     <h1>{{ title }}</h1>
+    <mat-toolbar class="IMS-inventory_items__toolbar">
+        <span class="IMS-inventory_items__logo">
+          <a href="/inventory_items" aria-label="logo home">IMS</a>
+        </span>
+        <span class="example-spacer"></span>
+        <div class="IMS-inventory_items__username">
+          <mat-icon>person</mat-icon>
+          <span>Username</span>
+          <button mat-raised-button color="accent">
+            Sign out
+          </button>
+        </div>
+      
+    </mat-toolbar>
 </div>

@@ -11,6 +11,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatDividerModule } from '@angular/material/divider';
 
 // import Component
 import { LoginComponent } from './components/login/login.component';
@@ -31,6 +33,8 @@ import { AppComponent } from './app.component';
       MatToolbarModule,
       MatFormFieldModule,
       MatInputModule,
+      MatMenuModule,
+      MatDividerModule
     ],
     bootstrap: [AppComponent]
 })

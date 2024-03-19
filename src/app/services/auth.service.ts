@@ -13,8 +13,23 @@ export class AuthService {
     return !!localStorage.getItem('username');
   }
 
+  isAdmin(role: string): boolean {
+    if(role === 'admin') {
+      return true;
+    }
+    return false;
+  }
+
+  isStaff(role: string): boolean {
+    if(role === 'staff') {
+      return true;
+    }
+    return false;
+  }
+
   logout(): void {
     localStorage.removeItem('username');
+    localStorage.removeItem('role');
     this.router.navigate(['/login']);
   }
 }

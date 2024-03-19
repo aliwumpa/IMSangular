@@ -1,6 +1,7 @@
 
 import { Component } from '@angular/core';
 import { accounts } from '../../environments/accounts';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'IMS__inventory_items',
@@ -9,15 +10,23 @@ import { accounts } from '../../environments/accounts';
 })
 
 export class LoginComponent {
-    errorMessage: string | null = null;
-    username: string | null = null;
-    password: string | null = null;
+    errorMessage: string = '';
+    username: string = '';
+    password: string = '';
 
-    signIn(username: string, password: string): void {
-        const user = matchUsername(username);
-        if(user && user.password === password) {
+    constructor(
+        private router: Router
+    ) {}
+
+    signIn(): void {
+        const user = matchUsername(this.username);
+        console.log(user, this.username);
+        if(user && user.password === this.password) {
             localStorage.setItem('username', user.username);
             localStorage.setItem('role', user.role);
+            this.router.navigate(['/inventory_items']);
+        } else {
+            this.errorMessage = 'Invalid username or password';
         }
     }
 }

@@ -1,17 +1,24 @@
+<mat-toolbar class="IMS-inventory_items__toolbar" color="accent">
+  <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu" yPosition="below" xPosition="before" backdropClass="sg-vertical-sub-menu">
+    <span mat-menu-item>{{ username }}</span>
+    <mat-divider></mat-divider>
+    <a mat-menu-item href="/inventory_items" aria-label="logo home">
+      <mat-icon>home</mat-icon>
+      <span>Home</span>
+    </a>
+    <mat-divider></mat-divider>
+    <button mat-menu-item (click)="signOut()">
+      <mat-icon>logout</mat-icon>
+      <span>Sign out</span>
+    </button>
+  </mat-menu>
+</mat-toolbar>
 <div class="IMS-inventory_items__wrapper" id="IMS__inventory_items">
+  <div class="IMS-inventory_items__table-wrapper">
     <h1>{{ title }}</h1>
-    <mat-toolbar class="IMS-inventory_items__toolbar">
-        <span class="IMS-inventory_items__logo">
-          <a href="/inventory_items" aria-label="logo home">IMS</a>
-        </span>
-        <span class="example-spacer"></span>
-        <div class="IMS-inventory_items__username">
-          <mat-icon>person</mat-icon>
-          <span>Username</span>
-          <button mat-raised-button color="accent">
-            Sign out
-          </button>
-        </div>
-      
-    </mat-toolbar>
+    <p>lorem lorem</p>
+  </div>
 </div>

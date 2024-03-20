@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -13,6 +14,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatTableModule } from '@angular/material/table';
 
 // import Component
 import { LoginComponent } from './components/login/login.component';
@@ -26,6 +28,7 @@ import { AppComponent } from './app.component';
       BrowserModule,
       CommonModule,
       FormsModule,
+      HttpClientModule,
       AppRoutingModule,
       BrowserAnimationsModule,
       MatIconModule,
@@ -34,7 +37,8 @@ import { AppComponent } from './app.component';
       MatFormFieldModule,
       MatInputModule,
       MatMenuModule,
-      MatDividerModule
+      MatDividerModule,
+      MatTableModule
     ],
     bootstrap: [AppComponent]
 })

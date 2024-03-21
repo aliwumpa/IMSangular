@@ -2,4 +2,18 @@
     &__toolbar {
         position: relative;
     }
+
+    &__wrapper {
+        padding: {
+            top: 20px;
+            bottom: 20px;
+        }
+    }
+
+    &__form-field {
+        &::ng-deep .mat-mdc-text-field-wrapper {
+            background-color: transparent;
+            max-width: 360px;
+        }
+    }
 }

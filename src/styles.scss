@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-@import './styles_custom.scss';
 @import '@angular/cdk/overlay-prebuilt.css';
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
 
 body {
     font-family: "Libre Baskerville", serif;
@@ -13,10 +13,10 @@ h1 {
 }
 
 .IMS__container {
+    max-width: 1360px;
+    margin: 0 auto;
     padding: {
         right: 15px;
         left: 15px;
-        max-width: 1360px;
-        margin: 0 auto;
     };
 }

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -16,22 +17,32 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatDialogModule } from '@angular/material/dialog';
 
 // import Component
 import { LoginComponent } from './components/login/login.component';
 import { InventoryItemsComponent } from './components/inventory_items/inventory_items.component';
+import { ItemAddEditComponent } from './components/item_add-edit/item_add-edit.component';
 import { AppComponent } from './app.component';
 
 
 @NgModule({
-    declarations: [AppComponent, LoginComponent, InventoryItemsComponent],
+    declarations: [
+      AppComponent, 
+      LoginComponent, 
+      InventoryItemsComponent,
+      ItemAddEditComponent
+    ],
     imports: [
       BrowserModule,
       CommonModule,
       FormsModule,
+      ReactiveFormsModule,
       HttpClientModule,
       AppRoutingModule,
       BrowserAnimationsModule,
+
+      // Angular material
       MatIconModule,
       MatButtonModule,
       MatToolbarModule,
@@ -40,7 +51,8 @@ import { AppComponent } from './app.component';
       MatMenuModule,
       MatDividerModule,
       MatTableModule,
-      MatPaginatorModule
+      MatPaginatorModule,
+      MatDialogModule
     ],
     bootstrap: [AppComponent]
 })

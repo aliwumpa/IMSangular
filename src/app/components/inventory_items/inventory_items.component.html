@@ -55,6 +55,21 @@
         <td mat-cell *matCellDef="let row">{{row.quantityInStock}}</td>
       </ng-container>
 
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
+        <td mat-cell *matCellDef="let row">
+          <button mat-icon-button color="accent" class="mat-icon-edit">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" class="mat-icon-delete">
+            <mat-icon>delete</mat-icon>
+          </button>
+          <button mat-icon-button class="mat-icon-pageview">
+            <mat-icon>info_outline</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 

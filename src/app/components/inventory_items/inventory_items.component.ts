@@ -1,11 +1,13 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
 import { AuthService } from "../../services/auth.service";
 import { InventoryService } from "../../services/manage_inventory.service";
+// import { item}
 
 // import Angular Material 
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
     selector: "IMS__inventory_items",
@@ -19,7 +21,8 @@ export class InventoryItemsComponent implements OnInit {
         'name',
         'description',
         'price',
-        'quantityInStock'
+        'quantityInStock',
+        'action'
     ];
 
     dataSource!: MatTableDataSource<any>;
@@ -29,7 +32,8 @@ export class InventoryItemsComponent implements OnInit {
 
     constructor(
         private _authService: AuthService,
-        private _inventoryService: InventoryService 
+        private _inventoryService: InventoryService ,
+        private _dialog : MatDialog
     ) {}
     
     title = 'Inventory Items';
@@ -60,6 +64,10 @@ export class InventoryItemsComponent implements OnInit {
         }
     }
 
+    addItemsForm() {
+        const dialogRef = this._dialog.open()
+    }
+
     signOut() {
         this._authService.logout();
     }
@@ -71,4 +79,8 @@ const GetUsername = () => {
 
 const GetRole = () => {
     return localStorage.getItem('role');
+}
+
+const addItemsForm = () => {
+    const dialogRef = this
 }
